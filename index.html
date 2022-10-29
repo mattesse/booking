@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matteo Scaffidi</title>
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!--
+    - #MAIN CONTAINER
+  -->
+
+  <div class="container">
+
+    <!--
+      - #HEADER SECTION
+    -->
+
+    <header>
+
+      <nav class="navbar">
+
+        <a class="navbar-brand">
+          <h2 class="about-h3">Matteo Scaffidi</h2>
+        </a>
+
+      </nav>
+
+    </header>
+      <!--
+        - #ABOUT SECTION
+      -->
+
+      <section class="about" id="about">
+
+        <div class="about-img-box">
+
+          <picture>
+            <source media="(max-width: 768px)" srcset="./images/desktop/matteo.JPG">
+            <source media="(min-width: 769px)" srcset="./images/desktop/matteo.JPG">
+
+            <img src="./images/mobile/image-stand-out.jpg" alt="about image" class="about-img" loading="lazy">
+          </picture>
+
+        </div>
+
+        <div class="about-content">
+          <h2 class="about-h2">Book a lesson</h2>
+
+          <p class="about-p">
+            It's time to learn.
+          </p>
+
+          <!-- Calendly inline widget begin -->
+          <div class="calendly-inline-widget" data-url="https://calendly.com/scaffidimatteo/60min?hide_event_type_details=1&hide_gdpr_banner=1"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          <!-- Calendly inline widget end -->
+        </div>
+        
+
+      </section>
+
+    <!--
+      - #FOOTER
+    -->
+
+    <footer>
+
+      <div class="footer-brand">
+        <h2 class="about-h3">Matteo Scaffidi</h2>
+      </div>
+
+      <div class="social-links">
+
+        <a href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+
+        <a href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+
+        <a href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+
+        <a href="#">
+          <ion-icon name="logo-pinterest"></ion-icon>
+        </a>
+
+      </div>
+
+    </footer>
+
+  </div>
+
+
+
+
+
+  <!--
+    - custom script
+  -->
+
+  <script>
+
+    // navbar variable
+
+    const nav = document.querySelector(".navbar-nav");
+    const navToggleBtn = document.querySelector(".nav-toggle-btn");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    // navbar toggle function
+    const navToggleFunc = function () {
+      nav.classList.toggle('active');
+      navToggleBtn.classList.toggle('active');
+    }
+
+    navToggleBtn.addEventListener('click', navToggleFunc);
+
+    for (let i = 0; i < navLinks.length; i++) {
+
+      navLinks[i].addEventListener('click', navToggleFunc);
+
+    }
+
+  </script>
+
+
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
